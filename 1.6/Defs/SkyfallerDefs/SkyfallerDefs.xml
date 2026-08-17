@@ -1,0 +1,92 @@
+<Defs>
+  <WorldObjectDef>
+    <defName>VPE_Pyromancer_ThermalAscension_Traveling_STNL</defName>
+    <label>Thermal ascension</label>
+    <description>A Pyromancer in flight.</description>
+    <worldObjectClass>VPE_Pyromancer_STNL.WorldObject_ThermalAscension</worldObjectClass>
+    <texture>UI_Pyromancer_STNL/WorldIcon/ThermalAscension_WorldMapIcon</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+	<expandingIconDrawSize>1.5</expandingIconDrawSize>
+    <expandingIconTexture>UI_Pyromancer_STNL/WorldIcon/ThermalAscension_WorldMapIcon</expandingIconTexture>
+    <expandingIconPriority>60</expandingIconPriority>
+    <expandMore>true</expandMore>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <fullyExpandedInSpace>true</fullyExpandedInSpace>
+    <validLaunchTarget>false</validLaunchTarget>
+  </WorldObjectDef>
+
+<ThingDef ParentName="SkyfallerBase">
+	<defName>VPE_Pyromancer_ThermalAscension_Ascending_STNL</defName>
+	<label>Thermal ascension</label>
+	<thingClass>VPE_Pyromancer_STNL.Skyfaller_ThermalAscension</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+	<graphicData>
+		<texPath>UI_Pyromancer_STNL/None</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>CutoutFlying</shaderType>
+		<drawSize>1.9</drawSize>
+	</graphicData>
+	<skyfaller>
+		<movementType>Decelerate</movementType>
+		<reversed>true</reversed>
+		<shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+		<shadowSize>(2, 2)</shadowSize>
+		<anticipationSound>DropPod_Leaving</anticipationSound>
+		<anticipationSoundTicks>-10</anticipationSoundTicks>
+		<ticksToImpactRange>
+			<min>-40</min>
+			<max>-15</max>
+		</ticksToImpactRange>
+		<angleCurve>
+			<points>
+				<li>(0, 0)</li>
+				<li>(0, 0)</li>
+			</points>
+		</angleCurve>
+		<speedCurve>
+			<points>
+				<li>(0, 5)</li>
+				<li>(0, 5)</li>
+			</points>
+		</speedCurve>
+	</skyfaller>
+</ThingDef>
+
+<ThingDef ParentName="SkyfallerBase">
+	<defName>VPE_Pyromancer_ThermalAscension_Descending_STNL</defName>
+	<label>Thermal descension</label>
+	<thingClass>VPE_Pyromancer_STNL.Skyfaller_ThermalDescension</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+	<graphicData>
+		<texPath>UI_Pyromancer_STNL/None</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>CutoutFlying</shaderType>
+		<drawSize>1.9</drawSize>
+	</graphicData>
+	<skyfaller>
+		<movementType>Decelerate</movementType>
+		<reversed>false</reversed>
+		<shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+		<shadowSize>(2, 2)</shadowSize>
+		<anticipationSound>DropPod_Leaving</anticipationSound>
+		<anticipationSoundTicks>-10</anticipationSoundTicks>
+		<ticksToImpactRange>
+			<min>40</min>
+			<max>15</max>
+		</ticksToImpactRange>
+		<angleCurve>
+			<points>
+				<li>(0, 0)</li>
+				<li>(0, 0)</li>
+			</points>
+		</angleCurve>
+		<speedCurve>
+			<points>
+				<li>(0, 5)</li>
+				<li>(0, 5)</li>
+			</points>
+		</speedCurve>
+	</skyfaller>
+</ThingDef>
+</Defs>

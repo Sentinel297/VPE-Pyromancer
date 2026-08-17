@@ -1,0 +1,15 @@
+<LanguageData>
+<!-- Ignite -->
+<VPE_Pyromancer_Ignite_NotEnoughNutrition_STNL>Not enough nutrition to make meal. ({0} required, currently {1})</VPE_Pyromancer_Ignite_NotEnoughNutrition_STNL>
+<VPE_Pyromancer_Ignite_GainedSkillXP_STNL>{0}: +{1}XP</VPE_Pyromancer_Ignite_GainedSkillXP_STNL>
+<!-- Blazing Dash -->
+<VPE_Pyromancer_BlazingDash_EndCellNotStandable_STNL>Something would prevent {0} from standing on the point of arrival.</VPE_Pyromancer_BlazingDash_EndCellNotStandable_STNL>
+<!-- Psionic Kindling -->
+<VPE_Pyromancer_PsionicKindling_PhoenixState_STNL>Psionic phoenix (100%)</VPE_Pyromancer_PsionicKindling_PhoenixState_STNL>
+<VPE_Pyromancer_PsionicKindling_PhoenixDeath_STNL>{0} has died, {1} will turn to ash and reform in a safe location after some time.</VPE_Pyromancer_PsionicKindling_PhoenixDeath_STNL>
+<VPE_Pyromancer_PsionicKindling_PhoenixResurrection_STNL>{0} has returned.</VPE_Pyromancer_PsionicKindling_PhoenixResurrection_STNL>
+<VPE_Pyromancer_PsionicKindling_PhoenixDescription_STNL>This Pyromancer has reached the full potential of their abilities, flame based attacks will deal twice their normal damage.\n\nUpon death, this creature will disperse into ash and return after a few days.</VPE_Pyromancer_PsionicKindling_PhoenixDescription_STNL>
+<!-- Settings -->
+<VPE_Pyromancer_PsionicKindling_STNL>Psionic Kindling:</VPE_Pyromancer_PsionicKindling_STNL>
+<VPE_Pyromancer_PsionicKindling_PhoenixRespawnRate_STNL>Psionic Phoenix: Respawn Delay ({0}~{1} day(s))</VPE_Pyromancer_PsionicKindling_PhoenixRespawnRate_STNL>
+</LanguageData>

@@ -1,0 +1,106 @@
+<Defs>
+<HediffDef>
+	<defName>VPE_Pyromancer_Cauterized_STNL</defName>
+	<label>Cauterized</label>
+	<description>This creature's wounds have been cauterized, bleeding has been stopped at the cost of severe pain for as long as cauterized wounds remain.</description>
+	<hediffClass>VPE_Pyromancer_STNL.Hediff_Cauterize</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0.5, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<alwaysAllowMothball>true</alwaysAllowMothball>
+	<modExtensions>
+	</modExtensions>
+	<stages>
+		<li>
+		<!-- <painFactor>0</painFactor> -->
+			<!-- <statFactors> -->
+				<!-- <PsychicEntropyRecoveryRate>0</PsychicEntropyRecoveryRate> -->
+			<!-- </statFactors> -->
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>20000</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Pyromancer_Emberize_STNL</defName>
+	<label>Embered</label>
+	<description>This creature is protected by a fiery aura rendering them immune to heat based afflictions.\n\nIt also possesses the ability to absorb nearby flames to recover from critcal wounds. Its attacks will set their targets ablaze.</description>
+	<hediffClass>VPE_Pyromancer_STNL.Hediff_Emberize</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0.7, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<alwaysAllowMothball>true</alwaysAllowMothball>
+	<modExtensions>
+	</modExtensions>
+	<stages>
+		<li>
+			<statOffsets>
+				<ComfyTemperatureMin>-999</ComfyTemperatureMin>
+				<ComfyTemperatureMax>999</ComfyTemperatureMax>
+				<ArmorRating_Heat>2</ArmorRating_Heat>
+			</statOffsets>
+			<statFactors>
+				<Flammability>0</Flammability>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>7500</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>VPE_Pyromancer_PsionicKindling_STNL</defName>
+	<label>Psionic kindling</label>
+	<description>This creature's flames are being fueled by ambient psychic forces, their heat based attacks will deal extra damage.</description>
+	<hediffClass>VPE_Pyromancer_STNL.Hediff_PsionicKindling</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0.7, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<alwaysAllowMothball>true</alwaysAllowMothball>
+	<modExtensions>
+	</modExtensions>
+	<stages>
+		<li>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_DisappearsOnDeath"/> -->
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>7500</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+</Defs>

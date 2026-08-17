@@ -1,0 +1,112 @@
+<Defs>
+<ThingDef ParentName="EtherealThingBase">
+	<defName>VPE_Pyromancer_WarmthEmitter_STNL</defName>
+	<label>Warmth</label>
+	<thingClass>Building_Worktable</thingClass>
+	<graphicData>
+		<texPath>UI_Pyromancer_STNL/None</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<!-- <shaderType>MoteGlowDistorted</shaderType> -->
+		<color>(255, 255, 245)</color>
+		<drawSize>2</drawSize>
+		<!-- <shaderParameters> -->
+		<!-- <_DistortionTex>/Other/Ripples</_DistortionTex> -->
+		<!-- <_distortionIntensity>0.05</_distortionIntensity> -->
+		<!-- <_DistortionScale>0.4</_DistortionScale> -->
+		<!-- <_distortionScrollSpeed>(0.07, 0.07, 0.0)</_distortionScrollSpeed> -->
+		<!-- </shaderParameters> -->
+	</graphicData>
+	<tickerType>Normal</tickerType>
+	<drawerType>RealtimeOnly</drawerType>
+	<drawOffscreen>true</drawOffscreen>
+	<category>Building</category>
+	<altitudeLayer>MoteOverhead</altitudeLayer>
+	<techLevel>Archotech</techLevel>
+	<selectable>true</selectable>
+	<building>
+		<claimable>false</claimable>
+		<deconstructible>false</deconstructible>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+	<statBases>
+		<WorkTableWorkSpeedFactor>1</WorkTableWorkSpeedFactor>
+	</statBases>
+	<forceDebugSpawnable>true</forceDebugSpawnable>
+	<hasInteractionCell>True</hasInteractionCell>
+	<interactionCellOffset>(0,0,1)</interactionCellOffset>
+	<!-- <recipes> -->
+	<!-- <li>CookMealSimple</li> -->
+	<!-- <li>CookMealSimpleBulk</li> -->
+	<!-- <li>Make_Pemmican</li> -->
+	<!-- <li>Make_PemmicanBulk</li> -->
+	<!-- <li>BurnApparel</li> -->
+	<!-- <li>BurnWeapon</li> -->
+	<!-- <li>BurnDrugs</li> -->
+	<!-- <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFood</li> -->
+	<!-- <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFoodBulk</li> -->
+	<!-- </recipes> -->
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<comps>
+		<li Class="CompProperties_Glower">
+			<glowRadius>4.9</glowRadius>
+			<glowColor>(217,130,0,0)</glowColor>
+		</li>
+		<li Class="VPE_Pyromancer_STNL.CompProps_WarmthEmitter">
+			<radius>4.9</radius>
+		</li>
+	</comps>
+</ThingDef>
+
+  <WorkGiverDef>
+    <defName>VPE_Pyromancer_DoBillsCookWarmth_STNL</defName>
+    <label>cook meals at warmth</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>97</priorityInType>
+    <fixedBillGiverDefs>
+      <li>VPE_Pyromancer_WarmthEmitter_STNL</li>
+    </fixedBillGiverDefs>
+    <verb>cook at</verb>
+    <gerund>cooking at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+	
+<ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.RimWorld.Odyssey">
+	<defName>VPE_Pyromancer_TemporaryLavaField_STNL</defName>
+	<label>Cooling lava</label>
+	<thingClass>ThingWithComps</thingClass>
+	<tickerType>Normal</tickerType>
+	<drawerType>RealtimeOnly</drawerType>
+	<drawOffscreen>true</drawOffscreen>
+	<category>PsychicEmitter</category>
+	<altitudeLayer>MoteOverheadLow</altitudeLayer>
+	<forceDebugSpawnable>true</forceDebugSpawnable>
+	<graphicData>
+		<graphicClass>Graphic_Single</graphicClass>
+		<texPath>UI_Pyromancer_STNL/None</texPath>
+		<!-- <shaderType>MoteGlowDistorted</shaderType> -->
+		<color>(255, 255, 245)</color>
+		<drawSize>2</drawSize>
+		<!-- <shaderParameters> -->
+		<!-- <_DistortionTex>/Other/Ripples</_DistortionTex> -->
+		<!-- <_distortionIntensity>0.05</_distortionIntensity> -->
+		<!-- <_DistortionScale>0.4</_DistortionScale> -->
+		<!-- <_distortionScrollSpeed>(0.07, 0.07, 0.0)</_distortionScrollSpeed> -->
+		<!-- </shaderParameters> -->
+	</graphicData>
+	<comps>
+		<!-- <li Class="CompProperties_Glower"> -->
+		<!-- <glowRadius>4.9</glowRadius> -->
+		<!-- <glowColor>(217,130,0,0)</glowColor> -->
+		<!-- </li> -->
+		<li Class="VPE_Pyromancer_STNL.CompProps_TemporaryLavaField">
+			<coolingDelayRange>5000~7500</coolingDelayRange>
+		</li>
+	</comps>
+</ThingDef>
+</Defs>

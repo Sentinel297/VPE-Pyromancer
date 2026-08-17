@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<!-- Level 1 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_Ignite_Ability_STNL</defName>
+	<label>Ignite</label>
+	<description>Effect on enemies: Sets target creatures ablaze and may set off target mortar shells.\n\nEffect on downed/allied creatures: Cautherizes existing wounds by burning the damaged area, this process will apply burn scars to tended parts. The chance of applying burn scars depends on the target's flammability. The severity of the inflicted scar scales inversely with psychic sensitivity.\n\nEffect on raw food: Cooks the selected pile of ingredients and converts them into meals, the quality of which depends on the caster's psychic sensitivity.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_Ignite</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_Ignite</abilityClass>
+	<castSound>Psycast_Skip_Entry</castSound>
+	<castTime>15</castTime>
+	<targetMode>Thing</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<!-- <chance>0</chance> -->
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<!-- <requireLineOfSight>false</requireLineOfSight> -->
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>34.9</range>
+	
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>1</level>
+			<order>1</order>
+			<psyfocusCost>0.01</psyfocusCost>
+			<entropyGain>10</entropyGain>
+			<!-- <prerequisites> -->
+			<!-- <li>VPE_Neurophage_NeuralScramble_STNL</li> -->
+			<!-- </prerequisites> -->
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 2 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_Warmth_Ability_STNL</defName>
+	<label>Warmth</label>
+	<description>Produce a soothing flaming orb at the target location, this flame will steadily treat minor wounds in nearby creatures while also warming up the affected area. The temperature in the affected area cannot fall lower than 15°C.\n\nThe extreme heat emanated by this source of energy may be used to cook meals and burn certain items.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_Warmth</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_Warmth</abilityClass>
+	<castSound>Psycast_Skip_Entry</castSound>
+	<castTime>30</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>false</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<jobDef>VFEA_GotoTargetAndUseAbility</jobDef>
+	<requireLineOfSight>false</requireLineOfSight>
+	<showUndrafted>True</showUndrafted>
+	<distanceToTarget>1.9</distanceToTarget>
+	<range>99999</range>
+	
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>2</level>
+			<order>1</order>
+			<psyfocusCost>0.30</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_Ignite_Ability_STNL</li>
+			</prerequisites>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_FlameFocus_Ability_STNL</defName>
+	<label>Flame focus</label>
+	<description>Assimilate embers around the target point to quickly regenerate psyfocus. The amount of regenerated psyfocus scales with the user's psychic sensitivity.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_FlameFocus</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_FlameFocus</abilityClass>
+	<castSound>Psycast_Skip_Entry</castSound>
+	<castTime>30</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>false</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<!-- <requireLineOfSight>false</requireLineOfSight> -->
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>24.9</range>
+	
+	<radius>3.5</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.0</psyfocusCost>
+			<entropyGain>40</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_Ignite_Ability_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_BlazingOnslaught_Ability_STNL</defName>
+	<label>Blazing dash</label>
+	<description>Self-immolate and hurls the caster to the target location, setting most things in their wake ablaze.\n\nStructures will be turned into molten slag and hostile creatures will be stunned for a few seconds.\n\nSynergy requirement: Caster must be Embered.\n\nSynergy effect: Fiery detonations will occur at the location of factionless/hostile creatures that the caster passes by during dashing.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_BlazingDash</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_BlazingOnslaught</abilityClass>
+	<castSound>Psycast_Skip_Entry</castSound>
+	<castTime>30</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>false</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<requireLineOfSight>false</requireLineOfSight>
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>24.9</range>
+	
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>2</level>
+			<order>3</order>
+			<psyfocusCost>0.03</psyfocusCost>
+			<entropyGain>50</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_Ignite_Ability_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 3 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_Emberize_Ability_STNL</defName>
+	<label>Emberize</label>
+	<description>Form a fiery aura around the caster, rendering them immune to thermal attacks.\n\nDuring this state, the user may absorb nearby flames to recover from their wounds, their attacks will also light their targets on fire.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_Emberize</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_Emberize</abilityClass>
+	<castSound>VPE_FireBeam_Cast</castSound>
+	<castTime>60</castTime>
+	<durationTime>12500</durationTime>
+	<durationTimeStatFactors>
+	<PsychicSensitivity>1</PsychicSensitivity>
+	</durationTimeStatFactors>
+	<targetMode>Self</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<!-- <requireLineOfSight>false</requireLineOfSight> -->
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>0</range>
+	
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0.05</psyfocusCost>
+			<entropyGain>75</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_Warmth_Ability_STNL</li>
+			</prerequisites>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_PsionicKindling_Ability_STNL</defName>
+	<label>Psionic kindling</label>
+	<description>Evolutive passive:\n\nFire/Burn damage now deals a second instance of damage that inflicts a fraction of the original damage.\n\nEvolution effect: Damage increases proportionally to the amount of known Pyromancer psycasts.\n\nSecondary evolution: Psionic phoenix\n\nEvolution requirement: Unlock every Pyromancer psycast.\n\nEvolution effect: Upon death, this Pyromancer will disperse into ash to recover from their wounds and will return after a few days.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_PsionicKindling</iconPath>
+	<abilityClass>SentinelFramework_STNL.Ability_PassiveGiver</abilityClass>
+	<castSound>Psycast_Skip_Entry</castSound>
+	<castTime>30</castTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>false</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<!-- <requireLineOfSight>false</requireLineOfSight> -->
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>24.9</range>
+	
+	<radius>14.9</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>1</psyfocusCost>
+			<entropyGain>30</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_FlameFocus_Ability_STNL</li>
+			</prerequisites>
+		</li>
+		<li Class="SentinelFramework_STNL.Ability_PassiveModExt">
+		<hediffsToAdd>
+		<li>VPE_Pyromancer_PsionicKindling_STNL</li>
+		</hediffsToAdd>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_ThermalRentry_Ability_STNL</defName>
+	<label>Thermal ascension</label>
+	<description>Ascend high up in the air and soar into the sky by propelling the caster through the use of thermic detonations, this method of transportation is reserved for the user only, meaning it is unavailable while caravaning.\n\nTaking flight causes a fiery explosion around the user, piercing through roofing will cause a detonation at the point of impact, damaging anything nearby as the caster emerges.\n\nEncroaching on neutral/allied terrain will be seen as a breach of peace, turning the affected faction hostile.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_ThermalAscension</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_ThermalAscension</abilityClass>
+	<castSound>Psycast_Skip_Entry</castSound>
+	<castTime>30</castTime>
+	<targetMode>Tile</targetMode>
+	<worldTargeting>true</worldTargeting>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>false</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<!-- <requireLineOfSight>false</requireLineOfSight> -->
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>999999</range>
+	
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>3</level>
+			<order>3</order>
+			<psyfocusCost>0.20</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_BlazingOnslaught_Ability_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Level 4 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_Wildfire_Ability_STNL</defName>
+	<label>Wildfire</label>
+	<description>Provoke a localized thermic disruption capable of setting most things alight for a short duration.\n\nEvolution requirement: Unlock Psionic phoenix\n\nEvolution effect: Wildfire will cause a barrage of fiery detonations to rain down onto the affected area.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_Wildfire</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_Wildfire</abilityClass>
+	<castSound>VPE_DeathShield_Cast</castSound>
+	<castTime>90</castTime>
+	<durationTime>2500</durationTime>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>false</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<chance>0</chance>
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<!-- <requireLineOfSight>false</requireLineOfSight> -->
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>40.9</range>
+	
+	<radius>14.9</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>4</level>
+			<order>1</order>
+			<psyfocusCost>0.07</psyfocusCost>
+			<entropyGain>100</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_Emberize_Ability_STNL</li>
+			</prerequisites>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_Pyromancer_FireStorm_Ability_STNL</defName>
+	<label>Firestorm</label>
+	<description>Surround the region with a large entropic bubble, which will cause the local temperature to drastically increase.\n\nVarious flammable structures will be lit on fire and heatstroke will affect creatures who are incapable of withstanding such heat.\n\nThings located in the home area of the colony are immune to being set ablaze by this phenomenon.</description>
+	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_FireStorm</iconPath>
+	<abilityClass>VPE_Pyromancer_STNL.Ability_Firestorm</abilityClass>
+	<durationTime>60000</durationTime>
+	<durationTimeStatFactors>
+	<PsychicSensitivity>1</PsychicSensitivity>
+	</durationTimeStatFactors>
+	<castSound>Psycast_Neuroquake_Effect</castSound>
+	<castTime>180</castTime>
+	<targetMode>Self</targetMode>
+	<targetingParameters>
+		<canTargetLocations>false</canTargetLocations>
+		<canTargetSelf>true</canTargetSelf>
+		<canTargetAnimals>true</canTargetAnimals>
+		<canTargetPawns>true</canTargetPawns>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+	</targetingParameters>
+	<!-- <chance>0</chance> -->
+	
+	<!-- <jobDef>VFEA_GotoTargetAndUseAbility</jobDef> -->
+	<!-- <requireLineOfSight>false</requireLineOfSight> -->
+	<!-- <showUndrafted>True</showUndrafted> -->
+	<!-- <distanceToTarget>1.9</distanceToTarget> -->
+	<range>0</range>
+	
+	<radius>0</radius>
+	<needsTicking>true</needsTicking>
+	<goodwillImpact>0</goodwillImpact>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_Pyromancer_STNL</path>
+			<level>4</level>
+			<order>1</order>
+			<psyfocusCost>0.40</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+			<li>VPE_Pyromancer_Wildfire_Ability_STNL</li>
+			</prerequisites>
+		</li>
+		<li Class="SentinelFramework_STNL.AbilityForceCondiExt">
+		<conditionDef>VPE_Pyromancer_Firestorm_Condition_STNL</conditionDef>
+		<global>false</global>
+		<scaleDuraWithSensi>true</scaleDuraWithSensi>
+		<aiCanUse>false</aiCanUse>
+		</li>
+		<!-- <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget"> -->
+		<!-- <effecterDef>VPE_Acolyte_SignumCrucisSTNL</effecterDef> -->
+		<!-- <onCaster>true</onCaster> -->
+		<!-- <maintainForDuration>true</maintainForDuration> -->
+		<!-- <maintainForTicks>5</maintainForTicks> -->
+		<!-- </li> -->
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+</Defs>

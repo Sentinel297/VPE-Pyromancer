@@ -1,0 +1,8 @@
+<Patch>
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/[WorkGiverDef="DoBillsCookCampfire"]/fixedBillGiverDefs</xpath> -->
+		<!-- <value> -->
+			<!-- <li>VPE_Pyromancer_WarmthEmitter_STNL</li> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
+</Patch>
