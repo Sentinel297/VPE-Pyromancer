@@ -13,6 +13,11 @@
 <VPE_Pyromancer_PsionicKindling_STNL>Psionic Kindling:</VPE_Pyromancer_PsionicKindling_STNL>
 <VPE_Pyromancer_PsionicKindling_PhoenixRespawnRate_STNL>Psionic Phoenix: Respawn Delay ({0}~{1} day(s))</VPE_Pyromancer_PsionicKindling_PhoenixRespawnRate_STNL>
 <VPE_Pyromancer_ThermalAscension_STNL>Thermal Ascension:</VPE_Pyromancer_ThermalAscension_STNL>
-<VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_STNL>Destroys launch tile?:</VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_STNL>
+<VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_STNL>Destroys launch tile:</VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_STNL>
 <VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_Desc_STNL>If active, taking flight will close the active map.\n\nAdds a gravship launch site to the tile if odyssey is active.</VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_Desc_STNL>
+<VPE_Pyromancer_ThermalAscension_TakeoffExplosionDamage_STNL>Takeoff explosion: Damage: {0}</VPE_Pyromancer_ThermalAscension_TakeoffExplosionDamage_STNL>
+<VPE_Pyromancer_ThermalAscension_TakeoffExplosionRadius_STNL>Takeoff explosion: Radius: {0}c</VPE_Pyromancer_ThermalAscension_TakeoffExplosionRadius_STNL>
+<VPE_Pyromancer_ThermalAscension_ForceExplosionOnLanding_STNL>Force explosion on landing:</VPE_Pyromancer_ThermalAscension_ForceExplosionOnLanding_STNL>
+<VPE_Pyromancer_ThermalAscension_LandingExplosionDamage_STNL>Landing explosion: Damage: {0}</VPE_Pyromancer_ThermalAscension_LandingExplosionDamage_STNL>
+<VPE_Pyromancer_ThermalAscension_LandingExplosionRadius_STNL>Landing explosion: Radius: {0}c</VPE_Pyromancer_ThermalAscension_LandingExplosionRadius_STNL>
 </LanguageData>
