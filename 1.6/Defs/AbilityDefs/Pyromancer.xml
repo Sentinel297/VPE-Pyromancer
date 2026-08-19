@@ -357,7 +357,7 @@
 	<description>Provoke a localized thermic disruption capable of setting most things alight for a short duration.\n\nEvolution requirement: Unlock Psionic phoenix\n\nEvolution effect: Wildfire will cause a barrage of fiery detonations to rain down onto the affected area.</description>
 	<iconPath>UI_Pyromancer_STNL/Abilities/Ability_Wildfire</iconPath>
 	<abilityClass>VPE_Pyromancer_STNL.Ability_Wildfire</abilityClass>
-	<castSound>VPE_DeathShield_Cast</castSound>
+	<castSound>VPE_Deathshield_Cast</castSound>
 	<castTime>90</castTime>
 	<durationTime>2500</durationTime>
 	<targetMode>Location</targetMode>
