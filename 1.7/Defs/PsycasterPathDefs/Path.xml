@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<!-- Pyromancer -->
+
+<VanillaPsycastsExpanded.PsycasterPathDef>
+	<defName>VPE_Pyromancer_STNL</defName>
+	<label>Pyromancer</label>
+	<description>Pyromancers believe fire is a force of nature that, while often used for destruction, may grant many boons when controlled. Elder Pyromancers became one with fire, allowing them to return from death after a period of time. As opposed to apprentice Pyromancers who fell due to their hubris.</description>
+	<background>UI_Pyromancer_STNL/Tree/PyromancerTreeBase</background>
+	<altBackground>UI_Pyromancer_STNL/Tree/PyromancerTreeBase</altBackground>
+	<tab>Misc</tab>
+	<tooltip>Pyromancers believe fire is a force of nature that, while often used for destruction, may grant many boons when controlled. Elder Pyromancers became one with fire, allowing them to return from death after a period of time. As opposed to apprentice Pyromancers who fell due to their hubris.</tooltip>
+</VanillaPsycastsExpanded.PsycasterPathDef>
+
+</Defs>
