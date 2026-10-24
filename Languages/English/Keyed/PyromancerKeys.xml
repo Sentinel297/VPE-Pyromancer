@@ -15,6 +15,8 @@
 <VPE_Pyromancer_ThermalAscension_STNL>Thermal Ascension:</VPE_Pyromancer_ThermalAscension_STNL>
 <VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_STNL>Destroys launch tile:</VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_STNL>
 <VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_Desc_STNL>If active, taking flight will close the active map.\n\nAdds a gravship launch site to the tile if odyssey is active.</VPE_Pyromancer_ThermalAscension_DestroyLaunchSite_Desc_STNL>
+<VPE_Pyromancer_ThermalAscension_OpenMapIfNoMapPresent_STNL>Should the ability open maps when possible? (Experimental): </VPE_Pyromancer_ThermalAscension_OpenMapIfNoMapPresent_STNL>
+<VPE_Pyromancer_ThermalAscension_OpenMapIfNoMapPresent_Desc_STNL>If active, the ability will attempt to generate a map for the destination's world object if it accepts maps.</VPE_Pyromancer_ThermalAscension_OpenMapIfNoMapPresent_Desc_STNL>
 <VPE_Pyromancer_ThermalAscension_TakeoffExplosionDamage_STNL>Takeoff explosion: Damage: {0}</VPE_Pyromancer_ThermalAscension_TakeoffExplosionDamage_STNL>
 <VPE_Pyromancer_ThermalAscension_TakeoffExplosionRadius_STNL>Takeoff explosion: Radius: {0}c</VPE_Pyromancer_ThermalAscension_TakeoffExplosionRadius_STNL>
 <VPE_Pyromancer_ThermalAscension_ForceExplosionOnLanding_STNL>Force explosion on landing:</VPE_Pyromancer_ThermalAscension_ForceExplosionOnLanding_STNL>
