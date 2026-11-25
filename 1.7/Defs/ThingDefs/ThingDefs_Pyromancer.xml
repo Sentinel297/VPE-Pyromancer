@@ -23,6 +23,7 @@
 	<altitudeLayer>MoteOverhead</altitudeLayer>
 	<techLevel>Archotech</techLevel>
 	<selectable>true</selectable>
+	<useHitPoints>false</useHitPoints>
 	<building>
 		<claimable>false</claimable>
 		<deconstructible>false</deconstructible>
@@ -30,6 +31,7 @@
 	</building>
 	<statBases>
 		<WorkTableWorkSpeedFactor>1</WorkTableWorkSpeedFactor>
+		<Flammability>0</Flammability>
 	</statBases>
 	<forceDebugSpawnable>true</forceDebugSpawnable>
 	<hasInteractionCell>True</hasInteractionCell>
